@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+
+good = 0
+moderate = 0
+high = 0
+
+for patient, adherence in patients.items():
+
+    if adherence >= 80:
+        good += 1
+
+    elif adherence >= 50:
+        moderate += 1
+
+    else:
+        high += 1
+
+categories = ["Good", "Moderate", "High Risk"]
+counts = [good, moderate, high]
+
+plt.figure(figsize=(7,5))
+plt.bar(categories, counts)
+
+plt.title("Medication Adherence Risk Categories")
+plt.xlabel("Adherence Category")
+plt.ylabel("Number of Patients")
+
+plt.savefig("medication_adherence_chart.png")
+plt.show()
