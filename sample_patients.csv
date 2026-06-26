@@ -1,5 +1,4 @@
-Patient,Adherence
-John,90
-Sarah,65
-Michael,40
-Emma,85
+patients = {
+    "John": 90,
+    "Sarah": 65
+}
